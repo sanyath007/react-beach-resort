@@ -1,11 +1,8 @@
-import React from 'react';
+import React from 'react'
+import Hero from '../components/Hero'
 
 function Room(props) {
-  return (
-    <div>
-      Hello from Room page
-    </div>
-  );
+  return <Hero hero="roomsHero" />
 }
 
-export default Room;
+export default Room
