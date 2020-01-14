@@ -1,11 +1,22 @@
-import React from 'react';
+import React from 'react'
+import { Route, Switch } from 'react-router-dom'
 
 import './App.css'
+
+import Home from './pages/Home'
+import Room from './pages/Room'
+import SingleRoom from './pages/SingleRoom'
+import Error from './pages/Error'
 
 function App() {
   return (
     <>
-      Hello from app
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/rooms" component={Room} />
+        <Route exact path="/single-room" component={SingleRoom} />
+        <Route component={Error} />
+      </Switch>
     </>
   );
 }
